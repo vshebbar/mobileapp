@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "title": "Kitchen Deep Cleaning SPL",
+        "description": "More information about Kitchen deep cleaning.",
+        "category": "Deep Cleaning",
+        "priority": "High"
+    },
+    {
+        "id": 1,
+        "title": "Change bathroom tap",
+        "description": "More information about bathroom tap replacement.",
+        "category": "Plumbing",
+        "priority": "Medium"
+    },
+    {
+        "id": 2,
+        "title": "HVAC Vent Cleaning",
+        "description": "More information about HVAC ventilation cleaning.",
+        "category": "HVAC",
+        "priority": "Low"
+    }
+]

@@ -1,0 +1,93 @@
+const functions = require("@google-cloud/functions-framework");
+const express = require("express");
+const mysql = require("mysql2/promise"); // Use for MySQL. Replace with 'pg' for PostgreSQL.
+require("dotenv").config();
+
+const app = express();
+app.use(express.json());
+
+// Database connection details
+const dbConfig = {
+  host: process.env.DB_HOST, // e.g., '127.0.0.1' for local or 'cloudsql-instance-ip'
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  ssl: {
+    rejectUnauthorized: true, // Required if using SSL
+  },
+};
+
+// Create MySQL connection pool (for efficient queries)
+const pool = mysql.createPool(dbConfig);
+
+// **Register a new user**
+app.post("/user", async (req, res) => {
+  try {
+    const { email, phone, photo, attributes } = req.body;
+    const query = `INSERT INTO users (email, phone, photo, attributes) VALUES (?, ?, ?, ?)`;
+    const [result] = await pool.execute(query, [email, phone, photo, JSON.stringify(attributes)]);
+
+    res.status(201).json({ userId: result.insertId, message: "User registered successfully" });
+  } catch (error) {
+    console.error("Error registering user:", error);
+    res.status(500).json({ error: "Failed to register user" });
+  }
+});
+
+// **Update user profile**
+app.put("/user/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const { email, phone, photo, attributes } = req.body;
+    const query = `UPDATE users SET email=?, phone=?, photo=?, attributes=? WHERE id=?`;
+    const [result] = await pool.execute(query, [email, phone, photo, JSON.stringify(attributes), userId]);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({ message: "User updated successfully" });
+  } catch (error) {
+    console.error("Error updating user:", error);
+    res.status(500).json({ error: "Failed to update user" });
+  }
+});
+
+// **Fetch user profile**
+app.get("/user/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const query = `SELECT * FROM users WHERE id = ?`;
+    const [rows] = await pool.execute(query, [userId]);
+
+    if (rows.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json(rows[0]);
+  } catch (error) {
+    console.error("Error fetching user:", error);
+    res.status(500).json({ error: "Failed to fetch user" });
+  }
+});
+
+// **Delete user profile**
+app.delete("/user/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const query = `DELETE FROM users WHERE id = ?`;
+    const [result] = await pool.execute(query, [userId]);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json({ message: "User deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    res.status(500).json({ error: "Failed to delete user" });
+  }
+});
+
+// Export as Google Cloud Function
+functions.http("huxyservice", app);

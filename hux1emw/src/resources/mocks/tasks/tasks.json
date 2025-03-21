@@ -1,0 +1,82 @@
+[
+  {
+    "id": 0,
+    "title": "Kitchen Deep Cleaning SPL",
+    "category": "Deep Cleaning",
+    "status": "Rejected",
+    "date": "2025-02-11",
+    "ratings": "",
+    "agent": "",
+    "price": ""
+  },
+  {
+    "id": 1,
+    "title": "Change bathroom tap",
+    "category": "Plumbing",
+    "status": "Done",
+    "date": "2025-02-11",
+    "ratings": "4",
+    "agent": "Sam Pickers",
+    "price": "$20"
+  },
+  {
+    "id": 2,
+    "title": "HVAC Vent Cleaning",
+    "category": "HVAC Maintenance",
+    "status": "Due",
+    "date": "2025-02-19",
+    "ratings": "",
+    "agent": "",
+    "price": "$43"
+  },
+  {
+    "id": 3,
+    "title": "Diesel Generator Refill & Meter",
+    "category": "Power Supply Unit Maintenance",
+    "status": "Due",
+    "date": "2025-02-19",
+    "ratings": "",
+    "agent": "",
+    "price": "$30"
+  },
+  {
+    "id": 4,
+    "title": "Service Kitchen sink",
+    "category": "Plumbing",
+    "status": "Due",
+    "date": "2025-02-21",
+    "ratings": "",
+    "agent": "",
+    "price": "$10"
+  },
+  {
+    "id": 5,
+    "title": "Lawn trimmimg",
+    "category": "Garden",
+    "status": "Rejected",
+    "date": "2025-02-21",
+    "ratings": "",
+    "agent": "",
+    "price": ""
+  },
+  {
+    "id": 6,
+    "title": "Ceiling leakage fix",
+    "category": "Plumbing",
+    "status": "Done",
+    "date": "2025-02-02",
+    "ratings": "4",
+    "agent": "Sam Odegaurd",
+    "price": "$15"
+  },
+  {
+    "id": 7,
+    "title": "Swimming pool clean",
+    "category": "Deep Cleaning",
+    "status": "Due",
+    "date": "2025-02-11",
+    "ratings": "",
+    "agent": "",
+    "price": "$150"
+  }
+]

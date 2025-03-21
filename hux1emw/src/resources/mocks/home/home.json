@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Home1",
+        "address": {
+            "text": "Assetz Here and Now, behind Manyata Tech Park Road, Rachenahalli, Kasaba Hobli, Bengaluru, Karnataka, India",
+            "location": {
+                "lat": 13.0613055,
+                "lng": 77.6233773
+            },
+            "address": "Assetz Here and Now",
+            "dimensions": "1200",
+            "country": "India",
+            "zipcode": "560077"
+        },
+        "isDefault": true,
+        "expanded": false,
+        "layout": {}
+    },
+    {
+        "id": 2,
+        "name": "Home2",
+        "address": {
+            "text": "TVS Emerald, behind Manyata Tech Park Road, Rachenahalli, Kasaba Hobli, Bengaluru, Karnataka, India",
+            "location": {
+                "lat": 13.0613055,
+                "lng": 77.6233773
+            },
+            "address": "TVS Emerald",
+            "dimensions": "2400",
+            "country": "India",
+            "zipcode": "560077"
+        },
+        "isDefault": true,
+        "expanded": false,
+        "layout": {}
+    }
+]

@@ -1,0 +1,117 @@
+{
+    "roomWiseLayout": [
+        {
+            "id": "b3a8d3c3-8c6d-4e02-9e0c-ff4e4ea7800a",
+            "room": "Living Room",
+            "description": "A spacious living room with modern decor and ample natural light.",
+            "appliances": [
+                {
+                    "name": "Television",
+                    "quantity": 1
+                },
+                {
+                    "name": "Air Conditioner",
+                    "quantity": 1
+                },
+                {
+                    "name": "Ceiling Fan",
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "id": "a7c3e019-57fc-4c85-9237-2d4a0b3d8f3e",
+            "room": "Kitchen",
+            "description": "A contemporary kitchen with state-of-the-art appliances.",
+            "appliances": [
+                {
+                    "name": "Refrigerator",
+                    "quantity": 1
+                },
+                {
+                    "name": "Microwave/Oven",
+                    "quantity": 1
+                },
+                {
+                    "name": "Dishwasher",
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "id": "c5f2e8e2-4a0e-47f6-91c9-bcbd29f5c2b9",
+            "room": "Master Bedroom",
+            "description": "A comfortable master bedroom with an ensuite bathroom.",
+            "appliances": [
+                {
+                    "name": "Air Conditioner",
+                    "quantity": 1
+                },
+                {
+                    "name": "Ceiling Fan",
+                    "quantity": 1
+                },
+                {
+                    "name": "Television",
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "id": "f187b49c-5b6d-4b43-9fa8-1b4d1ecb48c3",
+            "room": "Bathroom",
+            "description": "A well-equipped bathroom with modern fixtures.",
+            "appliances": [
+                {
+                    "name": "Water Heater",
+                    "quantity": 1
+                }
+            ]
+        },
+        {
+            "id": "e2d69c73-0db6-4f65-a6e9-f2a49f3b12a0",
+            "room": "Laundry Room",
+            "description": "A functional laundry room with necessary appliances.",
+            "appliances": [
+                {
+                    "name": "Washing Machine/Dryer",
+                    "quantity": 1
+                }
+            ]
+        }
+    ],
+    "applianceWiseTotalQuantity": [
+        {
+            "appliance": "Television",
+            "quantity": 1
+        },
+        {
+            "appliance": "Air Conditioner",
+            "quantity": 2
+        },
+        {
+            "appliance": "Ceiling Fan",
+            "quantity": 2
+        },
+        {
+            "appliance": "Refrigerator",
+            "quantity": 1
+        },
+        {
+            "appliance": "Microwave/Oven",
+            "quantity": 1
+        },
+        {
+            "appliance": "Dishwasher",
+            "quantity": 1
+        },
+        {
+            "appliance": "Water Heater",
+            "quantity": 1
+        },
+        {
+            "appliance": "Washing Machine/Dryer",
+            "quantity": 1
+        }
+    ]
+}
